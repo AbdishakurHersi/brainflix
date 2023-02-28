@@ -1,0 +1,115 @@
+@import "../styles/partials/variables";
+@import "../styles/partials/mixins";
+@import "../styles/partials/fonts";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  padding: 24px 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 16px 32px;
+    justify-content: space-between;
+  }
+  @include desktop {
+    padding: 16px 120px;
+  }
+  &__logo {
+    height: 25px;
+    width: 120px;
+    text-align: center;
+    margin: auto;
+    @include tablet {
+      margin-top: 0.75rem;
+    }
+  }
+  &__picture {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    right: 0;
+    top: 1.2rem;
+    @include tablet {
+      position: unset;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__header {
+    position: relative;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    // padding-bottom: 16px;
+
+    @include tablet {
+      position: unset;
+      flex-direction: row;
+      padding: 0;
+      flex-grow: 1;
+      // padding-left: 8rem;
+    }
+  }
+  &__searchbar {
+    height: 40px;
+    border-radius: 4px;
+    border-color: white;
+    padding-top: 16px;
+    flex-grow: 1;
+    margin-right: 1rem;
+    width: 82.5%;
+    @include tablet {
+      position: unset;
+      margin-left: 8rem;
+    }
+    @include desktop {
+      margin-left: 30rem;
+    }
+  }
+  &__searchbarleft {
+    display: flex;
+    padding-left: 0.5rem;
+  }
+  &__searchlogo {
+    vertical-align: middle;
+  }
+  &__searchtext {
+    padding-left: 0.5rem;
+  }
+  &__uploadbar {
+    height: 40px;
+    border-radius: 4px;
+    background-color: #0095ff;
+    color: white;
+    border-color: white;
+    margin-top: 16px;
+    @include tablet {
+      margin-top: 0px;
+      // padding-left: ;
+      padding: 0 2rem;
+      margin-right: 1rem;
+    }
+  }
+  &__uploadstyle {
+    display: flex;
+  }
+  &__uploadlogo {
+    vertical-align: middle;
+    padding-left: 0.5rem;
+  }
+  &__uploadtext {
+    align-self: center;
+    flex-grow: 1;
+    display: inline-block;
+  }
+}
