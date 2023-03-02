@@ -1,0 +1,118 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/fonts";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.video {
+  padding: 0 16px;
+  @include tablet {
+    padding: 0 32px;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding-top: 24px;
+    @include tablet {
+      padding-bottom: 16px;
+      font-size: 33px;
+      line-height: 44px;
+      font-weight: 700;
+    }
+  }
+  &__border {
+    padding-top: 16px;
+    border-bottom: 1px solid #e1e1e1;
+    @include tablet {
+      visibility: hidden;
+      padding: 0;
+    }
+  }
+  &__borders {
+    @include tablet {
+      padding-top: 16px;
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    @include tablet {
+      padding: 0;
+    }
+  }
+  &__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__channel {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    @include tablet {
+      margin: 0 1rem 0 0;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+  }
+  &__timestamp {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #afafaf;
+    @include tablet {
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+  }
+  &__attraction {
+    display: flex;
+    flex-direction: column;
+    padding-right: 3.1rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__views {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #afafaf;
+    padding-left: 0.5rem;
+    @include tablet {
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+  }
+  &__logoviews {
+    vertical-align: bottom;
+  }
+  &__description {
+    padding-top: 16px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    @include tablet {
+      padding-top: 24px;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+}
