@@ -1,6 +1,6 @@
-@import "../styles/partials/variables";
-@import "../styles/partials/mixins";
-@import "../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/fonts";
 
 *,
 *::after,
@@ -11,7 +11,7 @@
 }
 
 .navigation {
-  padding: 24px 16px 0 16px;
+  padding: 24px 16px 16px 16px;
   display: flex;
   flex-direction: column;
 
