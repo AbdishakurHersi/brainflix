@@ -1,3 +1,4 @@
+import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <VideoDescription />
+      <Form />
     </>
   );
 }
