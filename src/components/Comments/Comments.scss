@@ -18,9 +18,13 @@
   margin-left: 1rem;
   margin-right: 1rem;
   display: flex;
+  padding-bottom: 1rem;
   @include tablet {
     margin: 0 32px;
     margin-top: 1rem;
+  }
+  @include desktop {
+    margin: 0 120px;
   }
 
   &__image {
