@@ -1,0 +1,61 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/fonts";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.bordertop {
+  border-bottom: 1px solid #e1e1e1;
+}
+.comments {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  @include tablet {
+    margin: 0 32px;
+    margin-top: 1rem;
+  }
+
+  &__image {
+    padding-right: 2.3rem;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #bbbbbb66;
+  }
+  &__container {
+    padding-left: 1rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  &__time {
+    display: inline-block;
+    color: #afafaf;
+  }
+  &__itself {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.375rem;
+
+    // @include desktop {
+    //   font-size: 0.8rem;
+    // }
+  }
+}
