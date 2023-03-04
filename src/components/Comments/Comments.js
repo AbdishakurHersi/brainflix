@@ -17,7 +17,7 @@ const Comments = ({ comments }) => {
   console.log(comments);
 
   return (
-    <>
+    <section>
       {/* {comment[0].map((array) => {
         return (
           <div className="comments">
@@ -63,7 +63,7 @@ const Comments = ({ comments }) => {
           // newDate(parseInt().tolocalestring())
         );
       })}
-    </>
+    </section>
   );
 };
 

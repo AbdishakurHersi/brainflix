@@ -9,7 +9,7 @@
   }
 
   @include desktop {
-    padding: 0 120px;
+    padding: 0;
   }
   &__title {
     font-family: avenir;
@@ -31,6 +31,9 @@
     @include tablet {
       visibility: hidden;
       padding: 0;
+    }
+    @include desktop {
+      padding-top: 0;
     }
   }
   &__borders {

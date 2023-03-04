@@ -16,7 +16,8 @@
     margin-top: 1rem;
   }
   @include desktop {
-    margin: 0 120px;
+    margin: 0;
+    padding-top: 1rem;
   }
 
   &__image {
@@ -26,6 +27,9 @@
     height: 36px;
     border-radius: 50%;
     background-color: #bbbbbb66;
+    // @include desktop {
+    //   padding-top: 2rem;
+    // }
   }
   &__container {
     padding-left: 1rem;
@@ -33,6 +37,9 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
   &__name {
     display: inline-block;

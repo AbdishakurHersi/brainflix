@@ -17,38 +17,14 @@ function App() {
   }
   let change;
   return (
-    // <>
-    //   <Header />
-    //   <Hero />
-    //   <div className="desktop">
-    //     <div className="desktop__main">
-    //       <VideoDescription />
-    //       <Form />
-    //       <Comments data={data} />
-    //     </div>
-    //     <div className="desktop__side">
-    //       <VideoSideBar datalist={datalist} change={change} />
-    //     </div>
-    //   </div>
-    // </>
     <>
-      {/* setCurrentPlant={setCurrentPlant}displayPlant={displayPlant} currentPlant=
-      {currentPlant} plantsData={plantsData} */}
-      {/* <VideoList
-        setCurrentVideo={setCurrentVideo}
-        displayVideo={displayVideo}
-        currentVideo={currentVideo}
-        datalist={datalist}
-      />
-      <VideoSideBar datalist={datalist} change={change} /> */}
       <Header />
-
       <Hero image={currentVideo.image} />
-      <div className="desktop">
-        <div className="a">
+      <div className="parent">
+        <div className="parent__video">
           <VideoList currentVideo={currentVideo} data={data} />
         </div>
-        <div className="b">
+        <div className="parent__side">
           <VideoSideBar
             setCurrentVideo={setCurrentVideo}
             displayVideo={displayVideo}

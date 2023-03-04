@@ -3,6 +3,7 @@ import "../../App.scss";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
 import Form from "../Form/Form";
+import "./VideoList.scss";
 const VideoList = ({ data, currentVideo }) => {
   function getVideoDetails() {
     //check for ids. if they are the same then we know which plant details to get
@@ -32,19 +33,20 @@ const VideoList = ({ data, currentVideo }) => {
   } = getVideoDetails();
   console.log(getVideoDetails());
   return (
-    <>
-      {/* <Hero image={image} /> */}
-      <VideoDescription
-        title={title}
-        channel={channel}
-        timestamp={timestamp}
-        views={views}
-        likes={likes}
-        description={description}
-      />
-      <Form />
-      <Comments comments={comments} />
-    </>
+    <div className="videoList">
+      <div className="videoList__contain">
+        <VideoDescription
+          title={title}
+          channel={channel}
+          timestamp={timestamp}
+          views={views}
+          likes={likes}
+          description={description}
+        />
+        <Form />
+        <Comments comments={comments} />
+      </div>
+    </div>
   );
 };
 

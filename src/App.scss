@@ -13,21 +13,20 @@ body {
   font-family: avenir, Arial, Helvetica, sans-serif;
 }
 
-.desktop {
-  // display: flex;
-  // flex-direction: row;
+.parent {
   @include desktop {
     display: flex;
-    flex-direction: row;
+  }
+  &__video {
+    @include desktop {
+      padding-left: 8rem;
+      border-right: 1px solid #e1e1e1;
+    }
+  }
+  &__side {
+    @include desktop {
+      margin-left: 2rem;
+      margin-right: 7rem;
+    }
   }
 }
-// .a {
-//   @include desktop {
-//     flex-shrink: 1;
-//   }
-// }
-// .b {
-//   @include desktop {
-//     flex-grow: 1;
-//   }
-// }

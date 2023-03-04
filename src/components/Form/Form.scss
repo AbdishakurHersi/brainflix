@@ -17,10 +17,13 @@
   }
 
   @include desktop {
+    font-family: avenir;
     font-size: 14px;
     line-height: 22px;
-    font-weight: 400;
-    padding-left: 120px;
+    font-weight: 700;
+    padding-top: 24px;
+    padding-left: 0;
+    padding-bottom: 24px;
   }
 }
 
@@ -30,8 +33,13 @@
   @include tablet {
     padding: 16px 32px 0 32px;
   }
+  // @include desktop {
+  //   // padding: 0 120px;
+  //   padding-bottom: 1rem;
+  // }
   @include desktop {
-    padding: 0 120px;
+    margin: 0;
+    padding: 0;
     padding-bottom: 1rem;
   }
 
