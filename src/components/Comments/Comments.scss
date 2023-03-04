@@ -1,14 +1,6 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/fonts";
-
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 .bordertop {
   border-bottom: 1px solid #e1e1e1;
 }
@@ -44,19 +36,26 @@
   }
   &__name {
     display: inline-block;
+    font-family: avenir;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
     padding-bottom: 0.5rem;
-
-    font-size: 0.9rem;
-    font-weight: bold;
   }
   &__time {
+    font-family: avenir;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
     display: inline-block;
     color: #afafaf;
   }
   &__itself {
     display: inline-block;
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-family: avenir;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
 
     // @include desktop {
     //   font-size: 0.8rem;

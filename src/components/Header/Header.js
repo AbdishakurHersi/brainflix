@@ -1,6 +1,7 @@
 import brainflixlogo from "../../assets/Logo/BrainFlix-logo.svg";
+import "../../App.scss";
 import search from "../../assets/Icons/search.svg";
-import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
+import avatarmohan from "../../assets/Images/Mohan-muruge.jpg";
 import upload from "../../assets/Icons/upload.svg";
 import "./Header.scss";
 
@@ -35,9 +36,9 @@ function Header() {
             </div>
           </button>
           <img
+            src={avatarmohan}
+            alt="avatar image of a person"
             className="navigation__picture"
-            src={picturemohan}
-            alt="picture of a person"
           />
         </div>
       </nav>

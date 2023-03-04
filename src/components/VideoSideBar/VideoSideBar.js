@@ -1,4 +1,5 @@
 import "./VideoSideBar.scss";
+import "../../App.scss";
 const VideoSideBar = ({
   setCurrentVideo,
   datalist,
@@ -35,11 +36,13 @@ const VideoSideBar = ({
                 //remove from the list
               }}
             >
-              <img
-                className="videoside__image"
-                src={number.image}
-                alt="sideimage"
-              />
+              <div className="videoside__imagecontainer">
+                <img
+                  className="videoside__image"
+                  src={number.image}
+                  alt="sideimage"
+                />
+              </div>
 
               <div className="videoside__text">
                 <p className="videoside__header">{number.title}</p>

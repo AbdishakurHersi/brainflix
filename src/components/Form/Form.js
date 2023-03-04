@@ -1,9 +1,10 @@
 import "./Form.scss";
+import "../../App.scss";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 import comment from "../../assets/Icons/add_comment.svg";
 const Form = () => {
   return (
-    <>
+    <section>
       <p className="input__title">3 Comments</p>
       <div className="conversation">
         <div className="conversation__avatar">
@@ -33,7 +34,7 @@ const Form = () => {
           </button>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

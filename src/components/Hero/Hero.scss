@@ -1,13 +1,6 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/fonts";
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 .hero {
   background-color: black;
   &__image {

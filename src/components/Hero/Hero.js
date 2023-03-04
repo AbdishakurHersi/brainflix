@@ -1,4 +1,5 @@
 import "./Hero.scss";
+import "../../App.scss";
 import data from "../../data/video-details.json";
 const Hero = ({ image }) => {
   return (
