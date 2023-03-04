@@ -33,7 +33,7 @@ const VideoList = ({ data, currentVideo }) => {
   console.log(getVideoDetails());
   return (
     <>
-      <Hero image={image} />
+      {/* <Hero image={image} /> */}
       <VideoDescription
         title={title}
         channel={channel}

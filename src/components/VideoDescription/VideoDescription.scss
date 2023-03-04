@@ -19,6 +19,7 @@
     padding-top: 24px;
     @include tablet {
       padding-bottom: 16px;
+      font-family: avenir;
       font-size: 33px;
       line-height: 44px;
       font-weight: 700;
@@ -91,12 +92,14 @@
   }
   &__views {
     display: inline-block;
+    font-family: avenir;
     font-size: 10px;
     line-height: 20px;
     font-weight: 700;
     color: #afafaf;
     padding-left: 0.5rem;
     @include tablet {
+      font-family: avenir;
       font-size: 12px;
       line-height: 20px;
       font-weight: 700;
@@ -113,6 +116,7 @@
     font-weight: 400;
     @include tablet {
       padding-top: 24px;
+      font-family: avenir;
       font-size: 14px;
       line-height: 22px;
       font-weight: 400;

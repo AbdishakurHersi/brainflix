@@ -14,5 +14,20 @@ body {
 }
 
 .desktop {
-  display: flex;
+  // display: flex;
+  // flex-direction: row;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
 }
+// .a {
+//   @include desktop {
+//     flex-shrink: 1;
+//   }
+// }
+// .b {
+//   @include desktop {
+//     flex-grow: 1;
+//   }
+// }

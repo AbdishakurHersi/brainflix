@@ -5,6 +5,7 @@ import datalist from "./data/videos.json";
 import "./App.scss";
 import VideoList from "./components/VideoList/VideoList";
 import { useState } from "react";
+import Hero from "./components/Hero/Hero";
 function App() {
   const [currentVideo, setCurrentVideo] = useState(datalist[0]);
   function displayVideo(clickedVideoId) {
@@ -31,7 +32,6 @@ function App() {
     //   </div>
     // </>
     <>
-      <Header />
       {/* setCurrentPlant={setCurrentPlant}displayPlant={displayPlant} currentPlant=
       {currentPlant} plantsData={plantsData} */}
       {/* <VideoList
@@ -41,13 +41,22 @@ function App() {
         datalist={datalist}
       />
       <VideoSideBar datalist={datalist} change={change} /> */}
-      <VideoList currentVideo={currentVideo} data={data} />
-      <VideoSideBar
-        setCurrentVideo={setCurrentVideo}
-        displayVideo={displayVideo}
-        currentVideo={currentVideo}
-        datalist={datalist}
-      />
+      <Header />
+
+      <Hero image={currentVideo.image} />
+      <div className="desktop">
+        <div className="a">
+          <VideoList currentVideo={currentVideo} data={data} />
+        </div>
+        <div className="b">
+          <VideoSideBar
+            setCurrentVideo={setCurrentVideo}
+            displayVideo={displayVideo}
+            currentVideo={currentVideo}
+            datalist={datalist}
+          />
+        </div>
+      </div>
     </>
   );
 }

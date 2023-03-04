@@ -45,11 +45,13 @@
     // padding-bottom: 16px;
 
     @include tablet {
+      // max-width: 500px;
       position: unset;
       flex-direction: row;
       padding: 0;
       flex-grow: 1;
-      // padding-left: 8rem;
+      justify-content: space-between;
+      padding-left: 8rem;
     }
   }
   &__searchbar {
@@ -62,8 +64,10 @@
     margin-right: 3rem;
     // width: 82.5%;
     @include tablet {
-      position: unset;
-      margin-left: 8rem;
+      margin-right: 0;
+      // position: unset;
+      // // margin-left: 8rem;
+      width: 200px;
     }
     @include desktop {
       margin-left: 30rem;
@@ -77,9 +81,10 @@
     vertical-align: middle;
   }
   &__searchtext {
-    // font-family: avenir;
-    // font-weight: 700;
-    // line-height: 20px;
+    font-family: avenir;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
     padding-left: 0.5rem;
   }
   &__uploadbar {
@@ -101,14 +106,20 @@
   &__uploadlogo {
     vertical-align: middle;
     padding-left: 0.5rem;
+    @include tablet {
+    }
   }
   &__uploadtext {
-    // font-family: avenir;
-    // font-weight: 100;
-    // line-height: 20px;
-    // font-size: 10px;
+    font-family: avenir;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
     align-self: center;
     flex-grow: 1;
     display: inline-block;
+    @include tablet {
+      flex-grow: 0;
+      align-self: none;
+    }
   }
 }
