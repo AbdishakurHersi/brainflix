@@ -1,4 +1,4 @@
-import Hero from "../Hero/Hero";
+// import Hero from "../Hero/Hero";
 import "../../App.scss";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
@@ -22,7 +22,7 @@ const VideoList = ({ data, currentVideo }) => {
     return currentVideoDetails;
   }
   const {
-    image,
+    // image,
     title,
     channel,
     description,
@@ -31,7 +31,6 @@ const VideoList = ({ data, currentVideo }) => {
     likes,
     comments,
   } = getVideoDetails();
-  console.log(getVideoDetails());
   return (
     <div className="videoList">
       <div className="videoList__contain">

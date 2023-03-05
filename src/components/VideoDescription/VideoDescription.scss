@@ -13,16 +13,12 @@
   }
   &__title {
     font-family: avenir;
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
+    @include video-header;
     padding-top: 24px;
     @include tablet {
       padding-bottom: 16px;
       font-family: avenir;
-      font-size: 33px;
-      line-height: 44px;
-      font-weight: 700;
+      @include videotablet-header;
     }
   }
   &__border {
@@ -62,27 +58,22 @@
   }
   &__channel {
     font-family: avenir;
+    @include mobile-labels;
     font-size: 10px;
-    line-height: 20px;
-    font-weight: 700;
     margin-bottom: 0.5rem;
     @include tablet {
       margin: 0 1rem 0 0;
-      font-size: 12px;
-      line-height: 20px;
-      font-weight: 700;
+      font-family: avenir;
+      @include mobile-labels;
     }
   }
   &__timestamp {
     font-family: avenir;
+    @include mobile-labels;
     font-size: 10px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #afafaf;
+    color: $silver;
     @include tablet {
-      font-size: 12px;
-      line-height: 20px;
-      font-weight: 700;
+      @include mobile-labels;
     }
   }
   &__attraction {
@@ -96,16 +87,14 @@
   &__views {
     display: inline-block;
     font-family: avenir;
+    @include mobile-labels;
     font-size: 10px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #afafaf;
+    color: $silver;
     padding-left: 0.5rem;
     @include tablet {
       font-family: avenir;
+      @include mobile-labels;
       font-size: 12px;
-      line-height: 20px;
-      font-weight: 700;
     }
   }
   &__logoviews {
@@ -114,15 +103,11 @@
   &__description {
     padding-top: 16px;
     font-family: avenir;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
+    @include mobile-subheader;
     @include tablet {
       padding-top: 24px;
       font-family: avenir;
-      font-size: 14px;
-      line-height: 22px;
-      font-weight: 400;
+      @include tablet-subheader;
     }
   }
 }

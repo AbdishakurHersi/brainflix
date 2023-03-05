@@ -20,7 +20,7 @@ body {
   &__video {
     @include desktop {
       padding-left: 8rem;
-      border-right: 1px solid #e1e1e1;
+      border-right: 1px solid $mercury;
     }
   }
   &__side {

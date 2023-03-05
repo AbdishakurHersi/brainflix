@@ -11,3 +11,30 @@
     @content;
   }
 }
+
+@mixin mobile-labels {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+@mixin mobile-subheader {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+@mixin tablet-subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+@mixin video-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@mixin videotablet-header {
+  font-size: 33px;
+  line-height: 44px;
+  font-weight: 700;
+}

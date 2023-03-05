@@ -58,8 +58,8 @@
   &__searchbar {
     height: 40px;
     border-radius: 4px;
-    background-color: white;
-    border-color: #e1e1e1;
+    background-color: $white;
+    border-color: $mercury;
     margin-right: 3rem;
     @include tablet {
       margin-right: 1rem;
@@ -79,16 +79,14 @@
   }
   &__searchtext {
     font-family: avenir;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 20px;
+    @include mobile-labels;
     padding-left: 0.5rem;
   }
   &__uploadbar {
     height: 40px;
     border-radius: 4px;
-    background-color: #0095ff;
-    color: white;
+    background-color: $brainFlix-blue;
+    color: $white;
     margin-top: 16px;
 
     @include tablet {
@@ -104,9 +102,7 @@
   }
   &__uploadtext {
     font-family: avenir;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 20px;
+    @include mobile-labels;
     align-self: center;
     flex-grow: 1;
     display: inline-block;

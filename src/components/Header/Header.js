@@ -39,8 +39,8 @@ function Header() {
           </button>
           <img
             src={avatarmohan}
-            alt="avatar image of a person"
             className="navigation__picture"
+            alt="avatarperson"
           />
         </div>
       </nav>

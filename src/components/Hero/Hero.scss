@@ -2,7 +2,7 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/fonts";
 .hero {
-  background-color: black;
+  background-color: $brainFlix-barkBlack;
   &__image {
     width: 100%;
     object-fit: contain;
