@@ -9,11 +9,13 @@ function Header() {
   return (
     <header>
       <nav className="navigation">
-        <img
-          className="navigation__logo"
-          src={brainflixlogo}
-          alt="BrainFlix Logo"
-        />
+        <div className="navigation__container">
+          <img
+            className="navigation__logo"
+            src={brainflixlogo}
+            alt="BrainFlix Logo"
+          />
+        </div>
         <div className="navigation__header">
           <button className="navigation__searchbar">
             <div className="navigation__searchbarleft">

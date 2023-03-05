@@ -10,18 +10,23 @@
   @include tablet {
     flex-direction: row;
     padding: 16px 32px;
-    justify-content: space-between;
   }
   @include desktop {
     padding: 16px 120px;
   }
+  &__container {
+    text-align: center;
+    margin: auto;
+    object-fit: contain;
+    @include tablet {
+      margin: 0;
+    }
+  }
   &__logo {
     height: 25px;
     width: 120px;
-    text-align: center;
-    margin: auto;
     @include tablet {
-      margin-top: 0.75rem;
+      margin-top: 0.5rem;
     }
   }
   &__picture {
@@ -42,16 +47,12 @@
     padding-top: 16px;
     display: flex;
     flex-direction: column;
-    // padding-bottom: 16px;
-
     @include tablet {
-      // max-width: 500px;
       position: unset;
       flex-direction: row;
       padding: 0;
+      justify-content: flex-end;
       flex-grow: 1;
-      justify-content: space-between;
-      padding-left: 8rem;
     }
   }
   &__searchbar {
@@ -59,14 +60,9 @@
     border-radius: 4px;
     background-color: white;
     border-color: #e1e1e1;
-    // padding-top: 16px;
-    // flex-grow: 1;
     margin-right: 3rem;
-    // width: 82.5%;
     @include tablet {
-      margin-right: 0;
-      // position: unset;
-      // // margin-left: 8rem;
+      margin-right: 1rem;
       width: 200px;
     }
     @include desktop {
@@ -77,6 +73,7 @@
     display: flex;
     padding-left: 0.5rem;
   }
+
   &__searchlogo {
     vertical-align: middle;
   }
@@ -93,11 +90,9 @@
     background-color: #0095ff;
     color: white;
     margin-top: 16px;
+
     @include tablet {
       margin-top: 0px;
-      // padding-left: ;
-      padding: 0 2rem;
-      margin-right: 1rem;
     }
   }
   &__uploadstyle {
@@ -106,8 +101,6 @@
   &__uploadlogo {
     vertical-align: middle;
     padding-left: 0.5rem;
-    @include tablet {
-    }
   }
   &__uploadtext {
     font-family: avenir;

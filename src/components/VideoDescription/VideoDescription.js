@@ -12,6 +12,13 @@ const VideoDescription = ({
   likes,
   description,
 }) => {
+  function time(timestamp) {
+    const date = new Date(timestamp);
+    const day = date.toLocaleString("en-US", { day: "2-digit" });
+    const month = date.toLocaleString("en-US", { month: "2-digit" });
+    const year = date.toLocaleString("en-US", { year: "numeric" });
+    return `${month}/${day}/${year}`;
+  }
   return (
     <section className="video">
       <h1 className="video__title">{title}</h1>
@@ -19,9 +26,7 @@ const VideoDescription = ({
       <div className="video__container">
         <div className="video__author">
           <p className="video__channel">{channel}</p>
-          <p className="video__timestamp">
-            {new Date(parseInt(timestamp)).toLocaleDateString()}
-          </p>
+          <p className="video__timestamp">{time(new Date(timestamp))}</p>
         </div>
         <div className="video__attraction">
           <div className="video__channel">
