@@ -5,34 +5,5 @@
   @include desktop {
     display: flex;
     flex-direction: column;
-    // object-fit: fill;
-
-    justify-content: stretch;
   }
-  // &__contain {
-  //   @include desktop {
-
-  //   }
-  // }
 }
-
-// .video {
-//   @include desktop {
-//     display: flex;
-//   }
-//   // &__container{
-
-//   // }
-//   // &_description{
-
-//   // }
-//   // &__form{
-
-//   // }
-//   // &__comment{
-
-//   // }
-//   // &__side{
-
-//   // }
-// }

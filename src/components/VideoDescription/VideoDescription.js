@@ -1,6 +1,5 @@
 import "./VideoDescription.scss";
 import "../../App.scss";
-// import data from "../../data/video-details.json";
 import view from "../../assets/Icons/views.svg";
 import likess from "../../assets/Icons/likes.svg";
 
