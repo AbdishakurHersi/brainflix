@@ -5,33 +5,19 @@ import Comments from "../Comments/Comments";
 import Form from "../Form/Form";
 import "./VideoList.scss";
 const VideoList = ({ data, currentVideo }) => {
+  //check for ids. if they are the same then we know which video details to get
+  // currentvideo:
   function getVideoDetails() {
-    //check for ids. if they are the same then we know which plant details to get
-    // currentPlant:
-    /*
-         {
-            "id": "d801af14-8f94-4a51-b7f3-9d223fa3c201",
-            "name": "Dainty"
-        }
-        */
     const currentVideoId = currentVideo.id;
-    //const {id} = currentPlant;
     const currentVideoDetails = data.find((videoDetail) => {
       return videoDetail.id === currentVideoId;
     });
     return currentVideoDetails;
   }
-  const {
-    // image,
-    title,
-    channel,
-    description,
-    timestamp,
-    views,
-    likes,
-    comments,
-  } = getVideoDetails();
+  const { title, channel, description, timestamp, views, likes, comments } =
+    getVideoDetails();
   return (
+    //Videolist component
     <div className="videoList">
       <div className="videoList__contain">
         <VideoDescription

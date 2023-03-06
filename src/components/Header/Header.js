@@ -7,8 +7,9 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <header>
-      <nav className="navigation">
+    //Navbar component
+    <header className="navigation">
+      <nav className="navigation__section">
         <div className="navigation__container">
           <img
             className="navigation__logo"

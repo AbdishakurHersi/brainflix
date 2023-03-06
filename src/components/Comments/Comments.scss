@@ -5,21 +5,23 @@
   border-bottom: 1px solid $mercury;
 }
 .comments {
-  border-top: 1px solid $mercury;
-  padding-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  display: flex;
-  padding-bottom: 1rem;
-  @include tablet {
-    margin: 0 32px;
-    margin-top: 1rem;
-  }
-  @include desktop {
-    margin: 0;
+  &__component {
+    border-top: 1px solid $mercury;
     padding-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    padding-bottom: 1rem;
+    position: relative;
+    @include tablet {
+      margin: 0 32px;
+      margin-top: 1rem;
+    }
+    @include desktop {
+      margin: 0;
+      padding-top: 1rem;
+    }
   }
-
   &__image {
     padding-right: 2.3rem;
     vertical-align: middle;
@@ -34,9 +36,9 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    @include desktop {
-      padding-right: 1rem;
-    }
+    // @include desktop {
+    //   margin-right: 1rem;
+    // }
   }
   &__name {
     display: inline-block;
@@ -59,6 +61,11 @@
     font-weight: 400;
     display: inline-block;
     color: $silver;
+    @include desktop {
+      position: absolute;
+      right: 0;
+      padding-right: 1rem;
+    }
   }
   &__itself {
     display: inline-block;
@@ -68,9 +75,5 @@
       font-family: avenir;
       @include tablet-subheader;
     }
-
-    // @include desktop {
-    //   font-size: 0.8rem;
-    // }
   }
 }

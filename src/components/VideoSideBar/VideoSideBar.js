@@ -7,9 +7,11 @@ const VideoSideBar = ({
   currentVideo,
 }) => {
   return (
+    //Video side list component
     <div className="videoside">
       <p className="videoside__title">NEXT VIDEOS</p>
       {datalist.map((number) => {
+        //checking for ID'S
         if (number.id !== currentVideo.id) {
           return (
             <div
@@ -17,7 +19,6 @@ const VideoSideBar = ({
               className="videoside__container"
               onClick={function () {
                 displayVideo(number.id);
-
                 //remove from the list
               }}
             >
@@ -35,6 +36,7 @@ const VideoSideBar = ({
             </div>
           );
         } else {
+          // will return empty fragmenet
           return <></>;
         }
       })}

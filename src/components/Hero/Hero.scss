@@ -3,6 +3,8 @@
 @import "../../styles/partials/fonts";
 .hero {
   background-color: $brainFlix-barkBlack;
+  min-height: 24vh;
+
   &__image {
     width: 100%;
     object-fit: contain;

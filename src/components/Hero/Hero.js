@@ -1,18 +1,17 @@
 import "./Hero.scss";
 import "../../App.scss";
-import data from "../../data/video-details.json";
 const Hero = ({ image }) => {
+  //Hero component
   return (
-    <div className="hero">
+    <section className="hero">
       <video
         className="hero__image"
-        // poster={data[0].image}
         poster={image}
         loop
         controls
         display
       ></video>
-    </div>
+    </section>
   );
 };
 

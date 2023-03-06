@@ -4,18 +4,19 @@ import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 import comment from "../../assets/Icons/add_comment.svg";
 const Form = () => {
   return (
-    <section>
-      <p className="input__title">3 Comments</p>
-      <div className="conversation">
-        <div className="conversation__avatar">
+    //form component
+    <section className="form">
+      <p className="form__title">3 Comments</p>
+      <div className="form__subheader ">
+        <div className="form__avatar">
           <img
-            className="conversation__mohan"
+            className="form__avatarimage"
             src={picturemohan}
-            alt="picture of a person"
+            alt="Avatar Pictures "
           />
         </div>
-        <div className="input">
-          <form className="form">
+        <div className="form__input">
+          <form className="form__section">
             <label className="form__header">JOIN THE CONVERSATION</label>
             <textarea
               className="form__textarea"

@@ -4,24 +4,25 @@
 
 .videoside {
   border-top: 1px solid $mercury;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1em;
 
   padding: 1rem 0;
   @include tablet {
     margin-left: 32px;
-    padding-right: 28rem;
+    padding-right: 27rem;
   }
   @include desktop {
     border-top: none;
     margin-left: 0;
     padding-right: 0;
+    margin-top: 0.5rem;
   }
   &__title {
     font-family: avenir;
     @include mobile-subheader;
     font-weight: 700;
-    $mercury: #e1e1e1;
+    color: $mercury;
     padding-bottom: 1rem;
   }
   &__container {
@@ -54,6 +55,9 @@
       font-family: avenir;
       @include tablet-subheader;
       font-weight: 700;
+    }
+    @include desktop {
+      padding-bottom: 0.2rem;
     }
   }
   &__channel {

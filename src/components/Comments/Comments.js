@@ -1,7 +1,10 @@
 import "./Comments.scss";
 import "../../App.scss";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
+
 const Comments = ({ comments }) => {
+  // function that takes a timestamp in milliseconds
+  // and returns a date string in the format of "dd-mm-yyyy"
   function time(timestamp) {
     const date = new Date(timestamp);
     const day = date.toLocaleString("en-US", { day: "2-digit" });
@@ -10,14 +13,16 @@ const Comments = ({ comments }) => {
     return `${month}/${day}/${year}`;
   }
   return (
-    <section>
+    //comments component
+    <section className="comments">
       {comments.map((array) => {
         return (
-          <div key={array.id} className="comments">
+          //ID for each comment
+          <div key={array.id} className="comments__component">
             <img
               className="comments__image"
               src={picturemohan}
-              alt="avatarimage"
+              alt="Avatar Images"
             />
             <div className="comments__container">
               <div className="comments__header">

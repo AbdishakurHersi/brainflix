@@ -3,16 +3,18 @@
 @import "../../styles/partials/fonts";
 
 .navigation {
-  padding: 24px 16px 16px 16px;
-  display: flex;
-  flex-direction: column;
+  &__section {
+    padding: 24px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
 
-  @include tablet {
-    flex-direction: row;
-    padding: 16px 32px;
-  }
-  @include desktop {
-    padding: 16px 120px;
+    @include tablet {
+      flex-direction: row;
+      padding: 16px 32px;
+    }
+    @include desktop {
+      padding: 16px 120px;
+    }
   }
   &__container {
     text-align: center;
