@@ -5,7 +5,9 @@
   @include desktop {
     display: flex;
     flex-direction: column;
-    // width: 700px;
+    // object-fit: fill;
+
+    justify-content: stretch;
   }
   // &__contain {
   //   @include desktop {

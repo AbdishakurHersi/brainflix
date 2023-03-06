@@ -39,9 +39,12 @@
     right: 0;
     top: 1.2rem;
     @include tablet {
-      position: unset;
+      right: 1.5rem;
       width: 40px;
       height: 40px;
+    }
+    @include desktop {
+      right: 6rem;
     }
   }
   &__header {
@@ -50,10 +53,10 @@
     display: flex;
     flex-direction: column;
     @include tablet {
+      position: relative;
       position: unset;
       flex-direction: row;
       padding: 0;
-      justify-content: flex-end;
       flex-grow: 1;
     }
   }
@@ -64,11 +67,12 @@
     border-color: $mercury;
     margin-right: 3rem;
     @include tablet {
-      margin-right: 1rem;
       width: 200px;
+      position: absolute;
+      right: 13rem;
     }
     @include desktop {
-      margin-left: 30rem;
+      right: 18rem;
     }
   }
   &__searchbarleft {
@@ -92,7 +96,13 @@
     margin-top: 16px;
 
     @include tablet {
+      position: absolute;
+      right: 5rem;
       margin-top: 0px;
+    }
+    right: 6rem;
+    @include desktop {
+      right: 9rem;
     }
   }
   &__uploadstyle {

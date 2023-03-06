@@ -23,14 +23,14 @@ const Form = () => {
               placeholder="Add a new comment"
             ></textarea>
           </form>
-          <button className="navigation__uploadbar">
-            <div className="navigation__uploadstyle">
+          <button className="form__uploadbar">
+            <div className="form__uploadstyle">
               <img
-                className="navigation__uploadlogo"
+                className="form__uploadlogo"
                 src={comment}
                 alt="upload Logo"
               />
-              <p className="navigation__uploadtext">COMMENT</p>
+              <p className="form__uploadtext">COMMENT</p>
             </div>
           </button>
         </div>
