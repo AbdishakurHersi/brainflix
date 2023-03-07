@@ -7,7 +7,6 @@ const VideoSideBar = ({
   currentVideo,
 }) => {
   return (
-    //Video side list component
     <div className="videoside">
       <p className="videoside__title">NEXT VIDEOS</p>
       {datalist.map((number) => {
@@ -15,7 +14,6 @@ const VideoSideBar = ({
         if (number.id !== currentVideo.id) {
           return (
             <div
-              key={number.id}
               className="videoside__container"
               onClick={function () {
                 displayVideo(number.id);
