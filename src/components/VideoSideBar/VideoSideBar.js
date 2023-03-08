@@ -1,5 +1,6 @@
 import "./VideoSideBar.scss";
-import "../../App.scss";
+// import "../../App.scss";
+import "../Home/Home";
 const VideoSideBar = ({
   setCurrentVideo,
   datalist,

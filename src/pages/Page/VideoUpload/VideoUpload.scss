@@ -1,0 +1,134 @@
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixins";
+@import "../../../styles/partials/fonts";
+
+.form {
+  padding: 0 1rem;
+  // &__title {
+  //   padding-left: 1rem;
+  //   padding-top: 1rem;
+  //   font-family: avenir;
+  //   @include mobile-subheader;
+  //   font-weight: 700;
+
+  //   @include tablet {
+  //     padding: 24px 32px 0 32px;
+  //   }
+
+  //   @include desktop {
+  //     font-family: avenir;
+  //     @include tablet-subheader;
+  //     font-weight: 700;
+  //     padding-top: 24px;
+  //     padding-left: 0;
+  //     padding-bottom: 24px;
+  //   }
+  // }
+  // &__subheader {
+  //   padding: 16px;
+  //   display: flex;
+  //   @include tablet {
+  //     padding: 16px 32px 0 32px;
+  //   }
+  //   @include desktop {
+  //     margin: 0;
+  //     padding: 0;
+  //     padding-bottom: 1rem;
+  //   }
+  // }
+
+  &__inputs {
+    width: 100%;
+    height: 40px;
+    padding-left: 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // margin-left: 1rem;
+    // flex-grow: 1;
+    // @include tablet {
+    //   flex-direction: row;
+    //   align-items: flex-end;
+    // }
+  }
+
+  // &__section {
+  //   display: flex;
+  //   flex-direction: column;
+  //   @include tablet {
+  //     flex-grow: 1;
+  //     margin-right: 1rem;
+  //   }
+  // }
+  &__header {
+    font-family: avenir;
+    @include mobile-subheader;
+    font-weight: 700;
+    color: $silver;
+  }
+  &__picturecontainer {
+    height: 16vh;
+  }
+  &__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+    // @include tablet {
+    //   padding: 0 32px;
+    // }
+    // @include desktop {
+    //   padding: 0 180px;
+    // }
+  }
+
+  &__textarea {
+    height: 100px;
+    border-color: $silver;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    @include tablet {
+      padding-left: 1rem;
+      height: 40px;
+      width: 100%;
+    }
+  }
+  &__uploadbar {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border-color: white;
+    background-color: $brainFlix-blue;
+    color: $white;
+    margin-top: 16px;
+    &--color {
+      background-color: white;
+      color: $brainFlix-blue;
+      border: none;
+    }
+    @include tablet {
+      width: 150px;
+    }
+    @include desktop {
+      margin-right: 1rem;
+    }
+  }
+  &__uploadstyle {
+    display: flex;
+  }
+  &__uploadlogo {
+    vertical-align: middle;
+    padding-left: 0.5rem;
+    font-size: 0.1px;
+    width: 1.5rem;
+  }
+  &__uploadtext {
+    align-self: center;
+    flex-grow: 1;
+    display: inline-block;
+    font-family: avenir;
+    @include mobile-labels;
+    font-size: 10px;
+  }
+}

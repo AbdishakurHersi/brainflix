@@ -1,5 +1,6 @@
 import "./Form.scss";
-import "../../App.scss";
+// import "../../App.scss";
+import "../Home/Home";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 import comment from "../../assets/Icons/add_comment.svg";
 const Form = () => {

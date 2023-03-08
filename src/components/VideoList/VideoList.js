@@ -1,5 +1,6 @@
 // import Hero from "../Hero/Hero";
-import "../../App.scss";
+// import "../../App.scss";
+import "../Home/Home";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
 import Form from "../Form/Form";

@@ -1,5 +1,7 @@
 import "./Hero.scss";
-import "../../App.scss";
+// import "../../App.scss";
+import "../Home/Home";
+
 const Hero = ({ image }) => {
   //Hero component
   return (

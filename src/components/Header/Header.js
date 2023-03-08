@@ -1,12 +1,19 @@
 import brainflixlogo from "../../assets/Logo/BrainFlix-logo.svg";
-import "../../App.scss";
+// import "../../App.scss";
+import "../Home/Home";
 import search from "../../assets/Icons/search.svg";
 import avatarmohan from "../../assets/Images/Mohan-muruge.jpg";
 import upload from "../../assets/Icons/upload.svg";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import { Navigate, useParams, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/video");
+  };
   return (
     //Navbar component
 
@@ -37,7 +44,10 @@ function Header() {
                 src={upload}
                 alt="upload Logo"
               />
-              <p className="navigation__uploadtext">UPLOAD</p>
+              {/* <p className="navigation__uploadtext">UPLOAD</p> */}
+              <p className="navigation__uploadtext" onClick={handleClick}>
+                UPLOAD
+              </p>
             </div>
           </button>
           <img

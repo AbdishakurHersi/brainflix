@@ -1,5 +1,6 @@
 import "./Comments.scss";
-import "../../App.scss";
+// import "../../App.scss";
+import "../Home/Home";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 
 const Comments = ({ comments }) => {
