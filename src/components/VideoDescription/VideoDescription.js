@@ -1,6 +1,6 @@
 import "./VideoDescription.scss";
 // import "../../App.scss";
-import "../Home/Home";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 import view from "../../assets/Icons/views.svg";
 import likess from "../../assets/Icons/likes.svg";
 

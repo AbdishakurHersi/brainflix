@@ -13,59 +13,59 @@ body {
   font-family: avenir, Arial, Helvetica, sans-serif;
 }
 
-.parent {
-  @include desktop {
-    display: flex;
-  }
-  &__video {
-    @include desktop {
-      width: 75%;
-      padding-left: 8rem;
-      border-right: 1px solid $mercury;
-    }
-  }
-  &__side {
-    @include desktop {
-      width: 25%;
-      margin-left: 2rem;
-      margin-right: 7rem;
-    }
-  }
-}
-.navigation {
-  &__uploadbar {
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    background-color: $brainFlix-blue;
-    color: $white;
-    border-color: $white;
-    margin-top: 16px;
-    @include tablet {
-      width: 150px;
-    }
-    @include desktop {
-      margin-right: 1rem;
-    }
-  }
-  &__uploadstyle {
-    display: flex;
-  }
-  &__uploadlogo {
-    vertical-align: middle;
-    padding-left: 0.5rem;
-    font-size: 0.1px;
-    width: 1.5rem;
-  }
-  &__uploadtext {
-    align-self: center;
-    flex-grow: 1;
-    display: inline-block;
-    font-family: avenir;
-    @include mobile-labels;
-    font-size: 10px;
-    @include tablet {
-      padding-left: 1.5rem;
-    }
-  }
-}
+// .parent {
+//   @include desktop {
+//     display: flex;
+//   }
+//   &__video {
+//     @include desktop {
+//       width: 75%;
+//       padding-left: 8rem;
+//       border-right: 1px solid $mercury;
+//     }
+//   }
+//   &__side {
+//     @include desktop {
+//       width: 25%;
+//       margin-left: 2rem;
+//       margin-right: 7rem;
+//     }
+//   }
+// }
+// .navigation {
+//   &__uploadbar {
+//     width: 100%;
+//     height: 40px;
+//     border-radius: 4px;
+//     background-color: $brainFlix-blue;
+//     color: $white;
+//     border-color: $white;
+//     margin-top: 16px;
+//     @include tablet {
+//       width: 150px;
+//     }
+//     @include desktop {
+//       margin-right: 1rem;
+//     }
+//   }
+//   &__uploadstyle {
+//     display: flex;
+//   }
+//   &__uploadlogo {
+//     vertical-align: middle;
+//     padding-left: 0.5rem;
+//     font-size: 0.1px;
+//     width: 1.5rem;
+//   }
+//   &__uploadtext {
+//     align-self: center;
+//     flex-grow: 1;
+//     display: inline-block;
+//     font-family: avenir;
+//     @include mobile-labels;
+//     font-size: 10px;
+//     @include tablet {
+//       padding-left: 1.5rem;
+//     }
+//   }
+// }

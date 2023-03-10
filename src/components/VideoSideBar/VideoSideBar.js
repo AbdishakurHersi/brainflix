@@ -1,42 +1,36 @@
+import "../../pages/Page/VideoPlayer/VideoPlayer.scss";
 import "./VideoSideBar.scss";
-// import "../../App.scss";
-import "../Home/Home";
-const VideoSideBar = ({
-  setCurrentVideo,
-  datalist,
-  displayVideo,
-  currentVideo,
-}) => {
+import { Link } from "react-router-dom";
+const VideoSideBar = ({ videoToDisplay, videoData }) => {
+  console.log(videoToDisplay, videoData);
   return (
+    //Video side list component
     <div className="videoside">
       <p className="videoside__title">NEXT VIDEOS</p>
-      {datalist.map((number) => {
+      {videoData.map(({ id, channel, image, title }) => {
         //checking for ID'S
-        if (number.id !== currentVideo.id) {
+
+        if (id !== videoToDisplay.id) {
           return (
-            <div
-              className="videoside__container"
-              onClick={function () {
-                displayVideo(number.id);
-                //remove from the list
-              }}
-            >
-              <div className="videoside__imagecontainer">
-                <img
-                  className="videoside__image"
-                  src={number.image}
-                  alt="sideimage"
-                />
-              </div>
-              <div className="videoside__text">
-                <p className="videoside__header">{number.title}</p>
-                <p className="videoside__channel">{number.channel}</p>
-              </div>
+            <div key={id}>
+              <Link className="videoside__container" to={`/video/${id}`}>
+                <div className="videoside__imagecontainer">
+                  <img
+                    className="videoside__image"
+                    src={image}
+                    alt="sideimage"
+                  />
+                </div>
+                <div className="videoside__text">
+                  <p className="videoside__header">{title}</p>
+                  <p className="videoside__channel">{channel}</p>
+                </div>
+              </Link>
             </div>
           );
         } else {
           // will return empty fragmenet
-          return <></>;
+          return null;
         }
       })}
     </div>

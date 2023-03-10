@@ -6,7 +6,6 @@
   border-top: 1px solid $mercury;
   margin-left: 1rem;
   margin-right: 1em;
-
   padding: 1rem 0;
   @include tablet {
     margin-left: 32px;
@@ -28,6 +27,8 @@
   &__container {
     display: flex;
     padding-bottom: 1rem;
+    text-decoration: none;
+    color: black;
   }
   &__imagecontainer {
     max-width: 100px;

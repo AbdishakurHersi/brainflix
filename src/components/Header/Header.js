@@ -1,6 +1,6 @@
 import brainflixlogo from "../../assets/Logo/BrainFlix-logo.svg";
 // import "../../App.scss";
-import "../Home/Home";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 import search from "../../assets/Icons/search.svg";
 import avatarmohan from "../../assets/Images/Mohan-muruge.jpg";
 import upload from "../../assets/Icons/upload.svg";
@@ -10,16 +10,20 @@ import { Navigate, useParams, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
+  const navigates = useNavigate();
 
   const handleClick = () => {
-    navigate("/video");
+    navigate("/videoUpload");
+  };
+  const homeClick = () => {
+    navigates("/");
   };
   return (
     //Navbar component
 
     <header className="navigation">
       <nav className="navigation__section">
-        <div className="navigation__container">
+        <div className="navigation__container" onClick={homeClick}>
           <img
             className="navigation__logo"
             src={brainflixlogo}

@@ -1,6 +1,6 @@
 import "./Comments.scss";
 // import "../../App.scss";
-import "../Home/Home";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 
 const Comments = ({ comments }) => {
