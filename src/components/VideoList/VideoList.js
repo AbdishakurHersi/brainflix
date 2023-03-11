@@ -3,7 +3,7 @@ import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
 import Form from "../Form/Form";
 import "./VideoList.scss";
-import Hero from "../Hero/Hero";
+// import Hero from "../Hero/Hero";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -41,23 +41,15 @@ const VideoList = ({ idOfVideoToDisplay }) => {
     return <h1>Loading Plant Details</h1>;
   }
   console.log(videoDetail);
-  const {
-    image,
-    title,
-    channel,
-    description,
-    timestamp,
-    views,
-    likes,
-    comments,
-  } = videoDetail;
+  const { title, channel, description, timestamp, views, likes, comments } =
+    videoDetail;
   return (
     //Videolist component
 
     <div className="videoList">
-      <div className="videoList__image">
+      {/* <div className="videoList__image">
         <Hero image={image} />
-      </div>
+      </div> */}
       <div className="videoList__contain">
         <VideoDescription
           title={title}

@@ -1,6 +1,7 @@
 import "../../pages/Page/VideoPlayer/VideoPlayer.scss";
 import "./VideoSideBar.scss";
 import { Link } from "react-router-dom";
+import VideoSideImage from "../VideoSideImage/VideoSideImage";
 const VideoSideBar = ({ videoToDisplay, videoData }) => {
   console.log(videoToDisplay, videoData);
   return (
@@ -14,13 +15,7 @@ const VideoSideBar = ({ videoToDisplay, videoData }) => {
           return (
             <div key={id}>
               <Link className="videoside__container" to={`/video/${id}`}>
-                <div className="videoside__imagecontainer">
-                  <img
-                    className="videoside__image"
-                    src={image}
-                    alt="sideimage"
-                  />
-                </div>
+                <VideoSideImage image={image} />
                 <div className="videoside__text">
                   <p className="videoside__header">{title}</p>
                   <p className="videoside__channel">{channel}</p>
@@ -29,7 +24,7 @@ const VideoSideBar = ({ videoToDisplay, videoData }) => {
             </div>
           );
         } else {
-          // will return empty fragmenet
+          // will return empty
           return null;
         }
       })}

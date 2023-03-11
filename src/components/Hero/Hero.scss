@@ -4,6 +4,9 @@
 .hero {
   background-color: $brainFlix-barkBlack;
   min-height: 24vh;
+  // @include desktop {
+  //   flex-grow: 2;
+  // }
 
   &__image {
     width: 100%;
