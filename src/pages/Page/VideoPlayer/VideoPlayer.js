@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./VideoPlayer.scss";
+import NotFound from "../../../components/NotFound/NotFound";
 function VideoPlayer() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const { videoId } = useParams();
@@ -27,7 +28,7 @@ function VideoPlayer() {
   //   setCurrentPlant(newPlant)
   // }
   if (currentVideo === null) {
-    return <h1>Loading plants</h1>;
+    return <h1>...Loading</h1>;
   }
   const selectedVideoId = videoId || currentVideo[0].id;
   //VideoToDisplay will be an object representing a plant
