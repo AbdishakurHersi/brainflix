@@ -3,12 +3,12 @@
 @import "../../styles/partials/fonts";
 
 .videoside {
-  border-top: 1px solid $mercury;
+  border-top: 0.063rem solid $mercury;
   margin-left: 1rem;
   margin-right: 1em;
   padding: 1rem 0;
   @include tablet {
-    margin-left: 32px;
+    margin-left: 2rem;
     padding-right: 27rem;
   }
   @include desktop {

@@ -42,7 +42,7 @@ const VideoUpload = () => {
       </div>
       <form onSubmit={handleSubmit} className="forms__section">
         <div className="forms__box">
-          <div>
+          <div className="forms__videoparent">
             <label className="forms__header">VIDEO THUMBNAIL</label>
             <div className="forms__picturecontainer">
               <img

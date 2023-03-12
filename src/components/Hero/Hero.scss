@@ -4,18 +4,14 @@
 .hero {
   background-color: $brainFlix-barkBlack;
   min-height: 24vh;
-  // @include desktop {
-  //   flex-grow: 2;
-  // }
-
   &__image {
     width: 100%;
     object-fit: contain;
     @include tablet {
-      padding: 0 32px;
+      padding: 0 2rem;
     }
     @include desktop {
-      padding: 0 180px;
+      padding: 0 11.25rem;
     }
   }
 }

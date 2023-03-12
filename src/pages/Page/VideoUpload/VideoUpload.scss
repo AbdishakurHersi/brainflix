@@ -4,15 +4,15 @@
 @import "../../../App.scss";
 
 .forms {
-  // height: calc(100% + 100px);
   display: flex;
   flex-direction: column;
+
   &__section {
     padding: 0rem 1rem;
     display: flex;
     flex-direction: column;
     @include tablet {
-      border-top: 1px solid #e1e1e1;
+      border-top: 0.063rem solid #e1e1e1;
       padding: 0;
       padding-top: 2rem;
       margin-left: 2rem;
@@ -28,17 +28,17 @@
     }
   }
   &__head {
-    border-top: 1px solid #e1e1e1;
+    border-top: 0.063rem solid #e1e1e1;
   }
   &__titles {
     font-family: avenir;
     @include video-header;
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
     @include tablet {
       padding-left: 2rem;
 
-      padding-top: 36px;
-      padding-bottom: 24px;
+      padding-top: 2.25;
+      padding-bottom: 1.5rem;
       font-family: avenir;
       @include videotablet-header;
     }
@@ -50,8 +50,17 @@
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     padding-left: 1rem;
+    @include desktop {
+      height: 20%;
+    }
+  }
+  &__field {
+    @include desktop {
+      flex-grow: 1;
+      padding-left: 1rem;
+    }
   }
   &__header {
     font-family: avenir;
@@ -61,53 +70,62 @@
     color: $silver;
   }
   &__picturecontainer {
-    padding: 8px 0;
+    padding: 0.5rem 0;
     @include tablet {
       width: 50%;
+    }
+    @include desktop {
+      padding: 0;
+      width: 100%;
     }
   }
   &__picture {
     width: 100%;
-    height: 37vh;
+    height: 28vh;
     object-fit: fill;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     @include tablet {
-      height: 34vh;
+      height: 28vh;
+    }
+    @include desktop {
+      width: 100%;
+      height: 19vh;
     }
   }
 
   &__textarea {
     margin-top: 0.25rem;
-    height: 100px;
+    height: 5.25rem;
     border-color: $silver;
     padding-left: 1rem;
     padding-top: 0.5rem;
     width: 100%;
     @include tablet {
       padding-left: 1rem;
-      height: 80px;
+      height: 5rem;
       width: 100%;
+    }
+    @include desktop {
+      padding-left: 1rem;
+      width: 100%;
+      height: 45%;
     }
   }
   &__uploadbar {
     width: 100%;
-    height: 40px;
-    border-radius: 4px;
+    height: 2.5rem;
+    border-radius: 0.25rem;
     border-color: white;
     background-color: $brainFlix-blue;
     color: $white;
-    margin-top: 16px;
+    margin-top: 1rem;
     &--color {
       background-color: white;
       color: $brainFlix-blue;
       border: none;
-      // padding-right: 1rem;
     }
     @include tablet {
-      width: 150px;
-    }
-    @include desktop {
-      // margin-right: 1rem;
+      width: 9.375rem;
     }
   }
   &__uploadstyle {
@@ -116,7 +134,7 @@
   &__uploadlogo {
     vertical-align: middle;
     padding-left: 0.5rem;
-    font-size: 0.1px;
+    font-size: 0.006rem;
     width: 1.5rem;
   }
   &__uploadtext {
@@ -125,12 +143,12 @@
     display: inline-block;
     font-family: avenir;
     @include mobile-labels;
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   &__buttonfunction {
     @include tablet {
       margin-top: 1rem;
-      border-top: 1px solid #e1e1e1;
+      border-top: 0.063rem solid #e1e1e1;
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-start;
