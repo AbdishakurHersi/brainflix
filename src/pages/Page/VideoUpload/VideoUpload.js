@@ -23,7 +23,6 @@ const VideoUpload = () => {
 
   const handleFocus = (event) => {
     setIsActive(event.target.name);
-    console.log(event.target.name);
   };
 
   const handleChangeTitle = (event) => {
@@ -86,7 +85,11 @@ const VideoUpload = () => {
               name="title"
               value={title}
               className={`forms__inputs ${
-                titleError ? "error" : isActive === "title" ? "active" : ""
+                titleError
+                  ? "forms__error"
+                  : isActive === "title"
+                  ? "forms__active"
+                  : ""
               }`}
             ></input>
             <label className="forms__header">ADD A VIDEO DESCRIPTION</label>
@@ -100,9 +103,9 @@ const VideoUpload = () => {
               onFocus={handleFocus}
               className={`forms__textarea  ${
                 descriptionError
-                  ? "error"
+                  ? "forms__error"
                   : isActive === "description"
-                  ? "active"
+                  ? "forms__active"
                   : ""
               }`}
             ></textarea>

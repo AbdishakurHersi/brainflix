@@ -163,17 +163,16 @@
       justify-content: flex-start;
     }
   }
+  &__active {
+    outline: 0.125rem solid $brainFlix-blue;
+  }
+
+  &__error {
+    border: 0.063rem solid #d22d2d;
+  }
 }
 ::placeholder {
   font-family: avenir;
   @include mobile-subheader;
   font-weight: 700;
-}
-
-.active {
-  border: 0.125rem solid $brainFlix-blue;
-}
-
-.error {
-  border: 0.063rem solid #d22d2d;
 }

@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./VideoPlayer.scss";
-import NotFound from "../../../components/NotFound/NotFound";
 function VideoPlayer() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const { videoId } = useParams();
@@ -28,7 +27,6 @@ function VideoPlayer() {
   const videoToDisplay = currentVideo.find(
     (video) => video.id === selectedVideoId
   );
-  console.log(currentVideo);
   return (
     <section>
       <Hero image={videoToDisplay.image} />

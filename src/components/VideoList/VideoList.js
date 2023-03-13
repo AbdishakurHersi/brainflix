@@ -9,10 +9,8 @@ import { useEffect, useState } from "react";
 const VideoList = ({ idOfVideoToDisplay }) => {
   //check for ids. if they are the same then we know which video details to get
   // currentvideo:
-  console.log(idOfVideoToDisplay);
   const [videoDetail, setVideoDetail] = useState(null);
   const [error, setError] = useState(null);
-  console.log(idOfVideoToDisplay);
   const API_URL = "https://project-2-api.herokuapp.com/";
   const API_KEY = "123";
   const getVideoDetailEndpoint = (videoId) => {
@@ -20,9 +18,8 @@ const VideoList = ({ idOfVideoToDisplay }) => {
   };
 
   useEffect(() => {
-    console.log("ran effect in plantinfo");
     const VideoDetailEndpoint = getVideoDetailEndpoint(idOfVideoToDisplay);
-    console.log(VideoDetailEndpoint);
+
     axios
       .get(VideoDetailEndpoint)
       .then(({ data }) => {
@@ -39,7 +36,7 @@ const VideoList = ({ idOfVideoToDisplay }) => {
   if (!videoDetail) {
     return <h1>Loading Plant Details</h1>;
   }
-  console.log(videoDetail);
+
   const { title, channel, description, timestamp, views, likes, comments } =
     videoDetail;
   return (
