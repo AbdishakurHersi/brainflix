@@ -1,5 +1,5 @@
 import "./VideoDescription.scss";
-import "../../App.scss";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 import view from "../../assets/Icons/views.svg";
 import likess from "../../assets/Icons/likes.svg";
 
@@ -11,8 +11,6 @@ const VideoDescription = ({
   likes,
   description,
 }) => {
-  // function that takes a timestamp in milliseconds
-  // and returns a date string in the format of "dd-mm-yyyy"
   function time(timestamp) {
     const date = new Date(timestamp);
     const day = date.toLocaleString("en-US", { day: "2-digit" });
@@ -21,7 +19,6 @@ const VideoDescription = ({
     return `${month}/${day}/${year}`;
   }
   return (
-    //Video component
     <section className="video">
       <h1 className="video__title">{title}</h1>
       <div className="video__border"></div>

@@ -1,10 +1,9 @@
 import "./Form.scss";
-import "../../App.scss";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 import comment from "../../assets/Icons/add_comment.svg";
 const Form = () => {
   return (
-    //form component
     <section className="form">
       <p className="form__title">3 Comments</p>
       <div className="form__subheader ">

@@ -4,16 +4,16 @@
 
 .navigation {
   &__section {
-    padding: 24px 16px 16px 16px;
+    padding: 1.5rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
 
     @include tablet {
       flex-direction: row;
-      padding: 16px 32px;
+      padding: 1rem 2rem;
     }
     @include desktop {
-      padding: 16px 120px;
+      padding: 1rem 7.5rem;
     }
   }
   &__container {
@@ -25,23 +25,23 @@
     }
   }
   &__logo {
-    height: 25px;
-    width: 120px;
+    height: 1.563rem;
+    width: 7.5rem;
     @include tablet {
       margin-top: 0.5rem;
     }
   }
   &__picture {
     position: absolute;
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
     right: 0;
     top: 1.2rem;
     @include tablet {
       right: 1.5rem;
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
     }
     @include desktop {
       right: 7rem;
@@ -49,7 +49,7 @@
   }
   &__header {
     position: relative;
-    padding-top: 16px;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     @include tablet {
@@ -61,13 +61,14 @@
     }
   }
   &__searchbar {
-    height: 40px;
-    border-radius: 4px;
+    height: 2.5rem;
+    border-radius: 0.25rem;
     background-color: $white;
     border-color: $mercury;
     margin-right: 3rem;
+    border: 0.063rem solid $mercury;
     @include tablet {
-      width: 200px;
+      width: 12.5rem;
       position: absolute;
       right: 13rem;
     }
@@ -89,16 +90,16 @@
     padding-left: 0.5rem;
   }
   &__uploadbar {
-    height: 40px;
-    border-radius: 4px;
+    height: 2.5rem;
+    border-radius: 0.25rem;
     background-color: $brainFlix-blue;
     color: $white;
-    margin-top: 16px;
+    margin-top: 1rem;
 
     @include tablet {
       position: absolute;
       right: 5rem;
-      margin-top: 0px;
+      margin-top: 0;
     }
     right: 6rem;
     @include desktop {

@@ -1,43 +1,26 @@
+import "../../pages/Page/VideoPlayer/VideoPlayer.scss";
 import "./VideoSideBar.scss";
-import "../../App.scss";
-const VideoSideBar = ({
-  setCurrentVideo,
-  datalist,
-  displayVideo,
-  currentVideo,
-}) => {
+import { Link } from "react-router-dom";
+import VideoSideImage from "../VideoSideImage/VideoSideImage";
+const VideoSideBar = ({ videoToDisplay, videoData }) => {
   return (
-    //Video side list component
     <div className="videoside">
       <p className="videoside__title">NEXT VIDEOS</p>
-      {datalist.map((number) => {
-        //checking for ID'S
-        if (number.id !== currentVideo.id) {
+      {videoData.map(({ id, channel, image, title }) => {
+        if (id !== videoToDisplay.id) {
           return (
-            <div
-              key={number.id}
-              className="videoside__container"
-              onClick={function () {
-                displayVideo(number.id);
-                //remove from the list
-              }}
-            >
-              <div className="videoside__imagecontainer">
-                <img
-                  className="videoside__image"
-                  src={number.image}
-                  alt="sideimage"
-                />
-              </div>
-              <div className="videoside__text">
-                <p className="videoside__header">{number.title}</p>
-                <p className="videoside__channel">{number.channel}</p>
-              </div>
+            <div key={id}>
+              <Link className="videoside__container" to={`/video/${id}`}>
+                <VideoSideImage image={image} />
+                <div className="videoside__text">
+                  <p className="videoside__header">{title}</p>
+                  <p className="videoside__channel">{channel}</p>
+                </div>
+              </Link>
             </div>
           );
         } else {
-          // will return empty fragmenet
-          return <></>;
+          return null;
         }
       })}
     </div>
