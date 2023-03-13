@@ -7,33 +7,55 @@ const VideoUpload = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [titleError, setTitleError] = useState(false);
+  const [descriptionError, setDescriptionError] = useState(false);
+  const [isActive, setIsActive] = useState(null);
+
+  const handleBlur = () => {
+    if (title === "") {
+      setTitleError(true);
+    }
+    if (description === "") {
+      setDescriptionError(true);
+    }
+    setIsActive(null);
+  };
+
+  const handleFocus = (event) => {
+    setIsActive(event.target.name);
+    console.log(event.target.name);
+  };
 
   const handleChangeTitle = (event) => {
     setTitle(event.target.value);
+    setTitleError(false);
   };
   const handleChangeDescription = (event) => {
     setDescription(event.target.value);
-  };
-
-  const isFormValid = () => {
-    // All fields are required, using state variables
-    if (!title || !description) {
-      return false;
-    }
-    return true;
+    setDescriptionError(false);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    if (isFormValid()) {
-      // This is where we would make an axios request
-      // to our backend to add the user to our database.
-      alert("Thank you for your upload");
-      navigate("/");
-    } else {
+    if (title === "") {
+      setTitleError(true);
       alert("Failed to sign up, you have errors in your form");
     }
+    if (description === "") {
+      setDescriptionError(true);
+      alert("Failed to sign up, you have errors in your form");
+    }
+    if (title !== "" && description !== "") {
+      // Handle form submission here
+      setTitle("");
+      setDescription("");
+      setTitleError(false);
+      setDescriptionError(false);
+      alert("Thank you for your upload");
+      navigate("/");
+    }
+
+    setIsActive(null);
   };
   return (
     <section className="forms">
@@ -56,21 +78,33 @@ const VideoUpload = () => {
           <div className="forms__field">
             <label className="forms__header">TITLE YOUR VIDEO</label>
             <input
-              className="forms__inputs"
+              onBlur={handleBlur}
+              onFocus={handleFocus}
               placeholder="Add a title to your video"
               type="text"
               onChange={handleChangeTitle}
               name="title"
               value={title}
+              className={`forms__inputs ${
+                titleError ? "error" : isActive === "title" ? "active" : ""
+              }`}
             ></input>
             <label className="forms__header">ADD A VIDEO DESCRIPTION</label>
             <textarea
-              className="forms__textarea"
               placeholder="Add a description to your video"
               type="text"
               onChange={handleChangeDescription}
               name="description"
               value={description}
+              onBlur={handleBlur}
+              onFocus={handleFocus}
+              className={`forms__textarea  ${
+                descriptionError
+                  ? "error"
+                  : isActive === "description"
+                  ? "active"
+                  : ""
+              }`}
             ></textarea>
           </div>
         </div>
@@ -85,11 +119,13 @@ const VideoUpload = () => {
               <p className="forms__uploadtext">PUBLISH</p>
             </div>
           </button>
-          <button className="forms__uploadbar forms__uploadbar--color">
+          <button
+            type="submit"
+            className="forms__uploadbar forms__uploadbar--color"
+          >
             <p className="forms__uploadtext">CANCEL</p>
           </button>
         </div>
-        {/* </div> */}
       </form>
     </section>
   );

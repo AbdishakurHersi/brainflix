@@ -66,6 +66,7 @@
     background-color: $white;
     border-color: $mercury;
     margin-right: 3rem;
+    border: 0.063rem solid $mercury;
     @include tablet {
       width: 12.5rem;
       position: absolute;

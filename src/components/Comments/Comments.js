@@ -1,11 +1,9 @@
 import "./Comments.scss";
-// import "../../App.scss";
 import "../../pages/Page/VideoPlayer/VideoPlayer";
 import picturemohan from "../../assets/Images/Mohan-muruge.jpg";
 
 const Comments = ({ comments }) => {
   // function that takes a timestamp in milliseconds
-  // and returns a date string in the format of "dd-mm-yyyy"
   function time(timestamp) {
     const date = new Date(timestamp);
     const day = date.toLocaleString("en-US", { day: "2-digit" });
@@ -14,7 +12,6 @@ const Comments = ({ comments }) => {
     return `${month}/${day}/${year}`;
   }
   return (
-    //comments component
     <section className="comments">
       {comments.map((array) => {
         return (

@@ -3,7 +3,6 @@ import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
 import Form from "../Form/Form";
 import "./VideoList.scss";
-// import Hero from "../Hero/Hero";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -44,12 +43,7 @@ const VideoList = ({ idOfVideoToDisplay }) => {
   const { title, channel, description, timestamp, views, likes, comments } =
     videoDetail;
   return (
-    //Videolist component
-
     <div className="videoList">
-      {/* <div className="videoList__image">
-        <Hero image={image} />
-      </div> */}
       <div className="videoList__contain">
         <VideoDescription
           title={title}

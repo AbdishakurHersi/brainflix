@@ -1,5 +1,4 @@
 import "./Hero.scss";
-// import "../../App.scss";
 import "../../pages/Page/VideoPlayer/VideoPlayer";
 
 const Hero = ({ image }) => {

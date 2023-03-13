@@ -3,14 +3,10 @@ import "./VideoSideBar.scss";
 import { Link } from "react-router-dom";
 import VideoSideImage from "../VideoSideImage/VideoSideImage";
 const VideoSideBar = ({ videoToDisplay, videoData }) => {
-  console.log(videoToDisplay, videoData);
   return (
-    //Video side list component
     <div className="videoside">
       <p className="videoside__title">NEXT VIDEOS</p>
       {videoData.map(({ id, channel, image, title }) => {
-        //checking for ID'S
-
         if (id !== videoToDisplay.id) {
           return (
             <div key={id}>
@@ -24,7 +20,6 @@ const VideoSideBar = ({ videoToDisplay, videoData }) => {
             </div>
           );
         } else {
-          // will return empty
           return null;
         }
       })}

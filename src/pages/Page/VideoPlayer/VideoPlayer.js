@@ -20,18 +20,11 @@ function VideoPlayer() {
         setCurrentVideo(data);
       });
   }, []);
-  // function displayPlant(clickedPlantId) {
-  //   //we have a plant ID: AS23R5-SDF14
-  //   //we need to find the plant inside plantData that has that ID
-  //   //to update the state
-  //   const newPlant = plantsData.find(plant => plant.id === clickedPlantId)
-  //   setCurrentPlant(newPlant)
-  // }
+
   if (currentVideo === null) {
     return <h1>...Loading</h1>;
   }
   const selectedVideoId = videoId || currentVideo[0].id;
-  //VideoToDisplay will be an object representing a plant
   const videoToDisplay = currentVideo.find(
     (video) => video.id === selectedVideoId
   );
