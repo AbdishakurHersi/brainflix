@@ -9,16 +9,28 @@ import "./VideoPlayer.scss";
 function VideoPlayer() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const { videoId } = useParams();
+  console.log(process.env.REACT_APP_API_URL);
+  //https://project-2-api.herokuapp.com/videos/?api_key=9a394b9c-6c4f-4413-bd66-603a19fcc11a
 
   useEffect(() => {
-    axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos/?api_key=9a394b9c-6c4f-4413-bd66-603a19fcc11a"
-      )
-      .then(({ data }) => {
-        setCurrentVideo(data);
-      });
+    axios.get(`${process.env.REACT_APP_API_URL}/videos`).then(({ data }) => {
+      setCurrentVideo(data);
+    });
   }, []);
+
+  // REACT_APP_API_URL="http://localhost:8000";
+
+  // useEffect(() => {
+  //   axios
+  //     .get(`${process.env.REACT_APP_API_URL}/videos`)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       // setCurrentVideo(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
 
   if (currentVideo === null) {
     return <h1>...Loading</h1>;

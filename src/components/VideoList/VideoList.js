@@ -15,6 +15,7 @@ const VideoList = ({ idOfVideoToDisplay }) => {
   const API_KEY = "123";
   const getVideoDetailEndpoint = (videoId) => {
     return `${API_URL}videos/${videoId}?api_key=${API_KEY}`;
+    // /videos/video:id
   };
 
   useEffect(() => {
