@@ -3,6 +3,7 @@ import "./VideoUpload.scss";
 import upload from "../../../assets/Icons/publish.svg";
 import uploadThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 const VideoUpload = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -46,6 +47,28 @@ const VideoUpload = () => {
     }
     if (title !== "" && description !== "") {
       // Handle form submission here
+
+      // const upload = {
+      //   title: title,
+      //   channel: description,
+      // };
+
+      // axios.post(`${process.env.REACT_APP_API_URL}/upload`);
+      // .then((response) => {
+      //   console.log(response);
+      // });
+      const object = {
+        up: title,
+        down: description,
+      };
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/upload`, object)
+        .then((response) => {
+          console.log("User created:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error creating user:", error);
+        });
       setTitle("");
       setDescription("");
       setTitleError(false);

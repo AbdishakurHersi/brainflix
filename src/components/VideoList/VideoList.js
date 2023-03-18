@@ -11,18 +11,9 @@ const VideoList = ({ idOfVideoToDisplay }) => {
   // currentvideo:
   const [videoDetail, setVideoDetail] = useState(null);
   const [error, setError] = useState(null);
-  const API_URL = "https://project-2-api.herokuapp.com/";
-  const API_KEY = "123";
-  const getVideoDetailEndpoint = (videoId) => {
-    return `${API_URL}videos/${videoId}?api_key=${API_KEY}`;
-    // /videos/video:id
-  };
-
   useEffect(() => {
-    const VideoDetailEndpoint = getVideoDetailEndpoint(idOfVideoToDisplay);
-
     axios
-      .get(VideoDetailEndpoint)
+      .get(`${process.env.REACT_APP_API_URL}/videos/${idOfVideoToDisplay}`)
       .then(({ data }) => {
         setVideoDetail(data);
       })
@@ -30,7 +21,6 @@ const VideoList = ({ idOfVideoToDisplay }) => {
         setError(err);
       });
   }, [idOfVideoToDisplay]);
-
   if (error) {
     return <h1>Error from api</h1>;
   }
@@ -39,7 +29,7 @@ const VideoList = ({ idOfVideoToDisplay }) => {
   }
 
   const { title, channel, description, timestamp, views, likes, comments } =
-    videoDetail;
+    videoDetail[0];
   return (
     <div className="videoList">
       <div className="videoList__contain">
