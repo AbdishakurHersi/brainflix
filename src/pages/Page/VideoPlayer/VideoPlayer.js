@@ -10,6 +10,7 @@ import "./VideoPlayer.scss";
 function VideoPlayer() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const { videoId } = useParams();
+  const [error, setError] = useState(null);
   const REACT_APP_API_URL = "http://localhost:8000";
   useEffect(() => {
     axios
@@ -18,9 +19,12 @@ function VideoPlayer() {
         setCurrentVideo(data);
       })
       .catch((err) => {
-        console.log(err);
+        setError(err);
       });
   }, []);
+  if (error) {
+    return <h1>Error from api</h1>;
+  }
 
   if (currentVideo === null) {
     return <h1>...Loading</h1>;

@@ -11,6 +11,8 @@ const VideoUpload = () => {
   const [titleError, setTitleError] = useState(false);
   const [descriptionError, setDescriptionError] = useState(false);
   const [isActive, setIsActive] = useState(null);
+  const [error, setError] = useState(null);
+  const REACT_APP_API_URL = "http://localhost:8000";
 
   const handleBlur = () => {
     if (title === "") {
@@ -50,14 +52,10 @@ const VideoUpload = () => {
         up: title,
         down: description,
       };
-      axios
-        .post(`${process.env.REACT_APP_API_URL}/upload`, object)
-        .then((response) => {
-          console.log("User created:", response.data);
-        })
-        .catch((error) => {
-          console.error("Error creating user:", error);
-        });
+      axios.post(`${REACT_APP_API_URL}/upload`, object).catch((err) => {
+        setError(err);
+      });
+
       setTitle("");
       setDescription("");
       setTitleError(false);
@@ -65,9 +63,13 @@ const VideoUpload = () => {
       alert("Thank you for your upload");
       navigate("/");
     }
+    if (error) {
+      return <h1>Error from api</h1>;
+    }
 
     setIsActive(null);
   };
+
   return (
     <section className="forms">
       <div className="forms__head">
