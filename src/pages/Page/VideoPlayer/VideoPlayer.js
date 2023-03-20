@@ -1,17 +1,19 @@
-import VideoSideBar from "../../../components/VideoSideBar/VideoSideBar";
-import "../../../App";
-import VideoList from "../../../components/VideoList/VideoList";
-import Hero from "../../../components/Hero/Hero";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import VideoSideBar from "../../../components/VideoSideBar/VideoSideBar";
+import VideoList from "../../../components/VideoList/VideoList";
+import Hero from "../../../components/Hero/Hero";
+import "../../../App";
 import "./VideoPlayer.scss";
+
 function VideoPlayer() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const { videoId } = useParams();
+  const REACT_APP_API_URL = "http://localhost:8000";
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/videos`)
+      .get(`${REACT_APP_API_URL}/videos`)
       .then(({ data }) => {
         setCurrentVideo(data);
       })

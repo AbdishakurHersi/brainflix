@@ -1,19 +1,19 @@
-import "../../App.scss";
+import { useEffect, useState } from "react";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
 import Form from "../Form/Form";
-import "./VideoList.scss";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import "../../App.scss";
 
 const VideoList = ({ idOfVideoToDisplay }) => {
   //check for ids. if they are the same then we know which video details to get
   // currentvideo:
   const [videoDetail, setVideoDetail] = useState(null);
   const [error, setError] = useState(null);
+  const REACT_APP_API_URL = "http://localhost:8000";
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/videos/${idOfVideoToDisplay}`)
+      .get(`${REACT_APP_API_URL}/videos/${idOfVideoToDisplay}`)
       .then(({ data }) => {
         setVideoDetail(data);
       })

@@ -1,9 +1,9 @@
+import axios from "axios";
 import { useState } from "react";
-import "./VideoUpload.scss";
+import { useNavigate } from "react-router-dom";
 import upload from "../../../assets/Icons/publish.svg";
 import uploadThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import "./VideoUpload.scss";
 const VideoUpload = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -46,17 +46,6 @@ const VideoUpload = () => {
       alert("Failed to sign up, you have errors in your form");
     }
     if (title !== "" && description !== "") {
-      // Handle form submission here
-
-      // const upload = {
-      //   title: title,
-      //   channel: description,
-      // };
-
-      // axios.post(`${process.env.REACT_APP_API_URL}/upload`);
-      // .then((response) => {
-      //   console.log(response);
-      // });
       const object = {
         up: title,
         down: description,

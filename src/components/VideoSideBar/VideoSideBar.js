@@ -1,7 +1,7 @@
-import "../../pages/Page/VideoPlayer/VideoPlayer.scss";
-import "./VideoSideBar.scss";
 import { Link } from "react-router-dom";
 import VideoSideImage from "../VideoSideImage/VideoSideImage";
+import "../../pages/Page/VideoPlayer/VideoPlayer.scss";
+import "./VideoSideBar.scss";
 const VideoSideBar = ({ videoToDisplay, videoData }) => {
   return (
     <div className="videoside">

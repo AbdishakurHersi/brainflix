@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import brainflixlogo from "../../assets/Logo/BrainFlix-logo.svg";
-import "../../pages/Page/VideoPlayer/VideoPlayer";
 import search from "../../assets/Icons/search.svg";
 import avatarmohan from "../../assets/Images/Mohan-muruge.jpg";
 import upload from "../../assets/Icons/upload.svg";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 import "./Header.scss";
-import { Link } from "react-router-dom";
 
 function Header() {
   return (
