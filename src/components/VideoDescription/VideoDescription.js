@@ -1,7 +1,7 @@
-import "./VideoDescription.scss";
-import "../../pages/Page/VideoPlayer/VideoPlayer";
 import view from "../../assets/Icons/views.svg";
 import likess from "../../assets/Icons/likes.svg";
+import "./VideoDescription.scss";
+import "../../pages/Page/VideoPlayer/VideoPlayer";
 
 const VideoDescription = ({
   title,

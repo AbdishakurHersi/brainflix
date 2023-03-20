@@ -115,6 +115,8 @@
   }
   &__uploadtext {
     font-family: avenir;
+    text-decoration: none;
+    color: white;
     @include mobile-labels;
     align-self: center;
     flex-grow: 1;

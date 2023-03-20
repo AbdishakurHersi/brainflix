@@ -1,8 +1,9 @@
+import axios from "axios";
 import { useState } from "react";
-import "./VideoUpload.scss";
+import { useNavigate } from "react-router-dom";
 import upload from "../../../assets/Icons/publish.svg";
 import uploadThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
-import { useNavigate } from "react-router-dom";
+import "./VideoUpload.scss";
 const VideoUpload = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -10,6 +11,8 @@ const VideoUpload = () => {
   const [titleError, setTitleError] = useState(false);
   const [descriptionError, setDescriptionError] = useState(false);
   const [isActive, setIsActive] = useState(null);
+  const [error, setError] = useState(null);
+  const REACT_APP_API_URL = "http://localhost:8000";
 
   const handleBlur = () => {
     if (title === "") {
@@ -23,7 +26,6 @@ const VideoUpload = () => {
 
   const handleFocus = (event) => {
     setIsActive(event.target.name);
-    console.log(event.target.name);
   };
 
   const handleChangeTitle = (event) => {
@@ -46,7 +48,14 @@ const VideoUpload = () => {
       alert("Failed to sign up, you have errors in your form");
     }
     if (title !== "" && description !== "") {
-      // Handle form submission here
+      const object = {
+        up: title,
+        down: description,
+      };
+      axios.post(`${REACT_APP_API_URL}/upload`, object).catch((err) => {
+        setError(err);
+      });
+
       setTitle("");
       setDescription("");
       setTitleError(false);
@@ -54,9 +63,13 @@ const VideoUpload = () => {
       alert("Thank you for your upload");
       navigate("/");
     }
+    if (error) {
+      return <h1>Error from api</h1>;
+    }
 
     setIsActive(null);
   };
+
   return (
     <section className="forms">
       <div className="forms__head">
@@ -86,7 +99,11 @@ const VideoUpload = () => {
               name="title"
               value={title}
               className={`forms__inputs ${
-                titleError ? "error" : isActive === "title" ? "active" : ""
+                titleError
+                  ? "forms__error"
+                  : isActive === "title"
+                  ? "forms__active"
+                  : ""
               }`}
             ></input>
             <label className="forms__header">ADD A VIDEO DESCRIPTION</label>
@@ -100,9 +117,9 @@ const VideoUpload = () => {
               onFocus={handleFocus}
               className={`forms__textarea  ${
                 descriptionError
-                  ? "error"
+                  ? "forms__error"
                   : isActive === "description"
-                  ? "active"
+                  ? "forms__active"
                   : ""
               }`}
             ></textarea>

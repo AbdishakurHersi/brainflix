@@ -1,30 +1,19 @@
-import "../../App.scss";
+import { useEffect, useState } from "react";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import Comments from "../Comments/Comments";
 import Form from "../Form/Form";
-import "./VideoList.scss";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import "../../App.scss";
 
 const VideoList = ({ idOfVideoToDisplay }) => {
   //check for ids. if they are the same then we know which video details to get
   // currentvideo:
-  console.log(idOfVideoToDisplay);
   const [videoDetail, setVideoDetail] = useState(null);
   const [error, setError] = useState(null);
-  console.log(idOfVideoToDisplay);
-  const API_URL = "https://project-2-api.herokuapp.com/";
-  const API_KEY = "123";
-  const getVideoDetailEndpoint = (videoId) => {
-    return `${API_URL}videos/${videoId}?api_key=${API_KEY}`;
-  };
-
+  const REACT_APP_API_URL = "http://localhost:8000";
   useEffect(() => {
-    console.log("ran effect in plantinfo");
-    const VideoDetailEndpoint = getVideoDetailEndpoint(idOfVideoToDisplay);
-    console.log(VideoDetailEndpoint);
     axios
-      .get(VideoDetailEndpoint)
+      .get(`${REACT_APP_API_URL}/videos/${idOfVideoToDisplay}`)
       .then(({ data }) => {
         setVideoDetail(data);
       })
@@ -32,16 +21,15 @@ const VideoList = ({ idOfVideoToDisplay }) => {
         setError(err);
       });
   }, [idOfVideoToDisplay]);
-
   if (error) {
     return <h1>Error from api</h1>;
   }
   if (!videoDetail) {
     return <h1>Loading Plant Details</h1>;
   }
-  console.log(videoDetail);
+
   const { title, channel, description, timestamp, views, likes, comments } =
-    videoDetail;
+    videoDetail[0];
   return (
     <div className="videoList">
       <div className="videoList__contain">

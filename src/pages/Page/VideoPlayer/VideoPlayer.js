@@ -1,25 +1,30 @@
-import VideoSideBar from "../../../components/VideoSideBar/VideoSideBar";
-import "../../../App";
-import VideoList from "../../../components/VideoList/VideoList";
-import Hero from "../../../components/Hero/Hero";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import VideoSideBar from "../../../components/VideoSideBar/VideoSideBar";
+import VideoList from "../../../components/VideoList/VideoList";
+import Hero from "../../../components/Hero/Hero";
+import "../../../App";
 import "./VideoPlayer.scss";
-import NotFound from "../../../components/NotFound/NotFound";
+
 function VideoPlayer() {
   const [currentVideo, setCurrentVideo] = useState(null);
   const { videoId } = useParams();
-
+  const [error, setError] = useState(null);
+  const REACT_APP_API_URL = "http://localhost:8000";
   useEffect(() => {
     axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos/?api_key=9a394b9c-6c4f-4413-bd66-603a19fcc11a"
-      )
+      .get(`${REACT_APP_API_URL}/videos`)
       .then(({ data }) => {
         setCurrentVideo(data);
+      })
+      .catch((err) => {
+        setError(err);
       });
   }, []);
+  if (error) {
+    return <h1>Error from api</h1>;
+  }
 
   if (currentVideo === null) {
     return <h1>...Loading</h1>;
@@ -28,7 +33,6 @@ function VideoPlayer() {
   const videoToDisplay = currentVideo.find(
     (video) => video.id === selectedVideoId
   );
-  console.log(currentVideo);
   return (
     <section>
       <Hero image={videoToDisplay.image} />
